@@ -1,0 +1,29 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "project": "./tsconfig.json"
+  },
+  "plugins": ["react", "react-hooks", "@typescript-eslint"],
+  "extends": [
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "airbnb",
+    "airbnb-typescript",
+    "prettier"
+  ],
+  "ignorePatterns": ["vite.config.ts"],
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "semi": ["error", "never"],
+    "import/prefer-default-export": "off",
+    "import/no-default-export": "error"
+  }
+}
