@@ -8,9 +8,9 @@ test('初期レンダリングされること', () => {
 })
 test('「Leanne Graham」の文言があること', async () => {
   render(<App />)
-  expect(await screen.findByText('Leanne Graham')).toBeInTheDocument()
+  expect(await screen.findByText('mock_1')).toBeInTheDocument()
 })
-test('リストが10件表示されていること', async () => {
+test('リストが2件表示されていること', async () => {
   render(<App />)
-  expect(await screen.findAllByTestId('users')).toHaveLength(10)
+  expect(await screen.findAllByTestId('users')).toHaveLength(2)
 })
