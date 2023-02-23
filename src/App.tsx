@@ -1,4 +1,4 @@
-import { Route, Routes, Link, Outlet } from 'react-router-dom'
+import { Route, Routes, Link, Outlet, BrowserRouter } from 'react-router-dom'
 import './App.css'
 import { Error } from './routes/error'
 import { Home } from './routes/home'
@@ -27,13 +27,15 @@ function Layout() {
 function App() {
   return (
     <div className="App">
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="users" element={<Users />} />
-          <Route path="*" element={<Error />} />
-        </Route>
-      </Routes>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="users" element={<Users />} />
+            <Route path="*" element={<Error />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   )
 }

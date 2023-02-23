@@ -11,7 +11,13 @@
     "ecmaVersion": "latest",
     "project": "./tsconfig.json"
   },
-  "plugins": ["react", "react-hooks", "@typescript-eslint"],
+  "plugins": [
+    "react",
+    "react-hooks",
+    "@typescript-eslint",
+    "jest-dom",
+    "testing-library"
+  ],
   "extends": [
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
@@ -19,7 +25,16 @@
     "airbnb-typescript",
     "prettier"
   ],
-  "ignorePatterns": ["vite.config.ts"],
+  "overrides": [
+    {
+      "files": [
+        "**/__tests__/**/*.+(ts|tsx|js)",
+        "**/?(*.)+(spec|test).+(ts|tsx|js)"
+      ],
+      "extends": ["plugin:jest-dom/recommended", "plugin:testing-library/react"]
+    }
+  ],
+  "ignorePatterns": ["vite.config.ts", "vitest.setup.ts"],
   "rules": {
     "react/react-in-jsx-scope": "off",
     "semi": ["error", "never"],
