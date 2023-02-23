@@ -6,7 +6,7 @@ test('初期レンダリングされること', () => {
   render(<App />)
   expect(screen.getAllByRole('link')).toHaveLength(3)
 })
-test('「Leanne Graham」の文言があること', async () => {
+test('「mock_1」の文言があること', async () => {
   render(<App />)
   expect(await screen.findByText('mock_1')).toBeInTheDocument()
 })
