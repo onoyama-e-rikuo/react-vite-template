@@ -1,5 +1,4 @@
 import { Route, Routes, Link, Outlet, BrowserRouter } from 'react-router-dom'
-import './App.css'
 import { Error } from './routes/error'
 import { Home } from './routes/home'
 import { Users } from './routes/users'

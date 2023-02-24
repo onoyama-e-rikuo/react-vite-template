@@ -15,6 +15,7 @@
     "react",
     "react-hooks",
     "@typescript-eslint",
+    "jest",
     "jest-dom",
     "testing-library"
   ],
@@ -31,10 +32,14 @@
         "**/__tests__/**/*.+(ts|tsx|js)",
         "**/?(*.)+(spec|test).+(ts|tsx|js)"
       ],
-      "extends": ["plugin:jest-dom/recommended", "plugin:testing-library/react"]
+      "extends": [
+        "plugin:jest/recommended",
+        "plugin:jest-dom/recommended",
+        "plugin:testing-library/react"
+      ]
     }
   ],
-  "ignorePatterns": ["vite.config.ts", "vitest.setup.ts"],
+  "ignorePatterns": ["vite.config.ts"],
   "rules": {
     "react/react-in-jsx-scope": "off",
     "semi": ["error", "never"],
