@@ -6,9 +6,7 @@ export function Users() {
   return (
     <ul>
       {users.map((user) => (
-        <li key={user.id} data-testid="users">
-          {user.name}
-        </li>
+        <li key={user.id}>{user.name}</li>
       ))}
     </ul>
   )

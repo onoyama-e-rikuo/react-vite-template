@@ -37,6 +37,12 @@
         "plugin:jest-dom/recommended",
         "plugin:testing-library/react"
       ]
+    },
+    {
+      "files": ["**/mocks/handlers.ts", "**/mocks/server.ts"],
+      "rules": {
+        "import/no-extraneous-dependencies": "off"
+      }
     }
   ],
   "ignorePatterns": ["vite.config.ts"],
