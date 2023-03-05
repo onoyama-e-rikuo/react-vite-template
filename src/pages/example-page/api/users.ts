@@ -1,4 +1,4 @@
-import { User } from './domains'
+import type { User } from './domains'
 
 export function getUsers(): Promise<User[]> {
   return fetch('https://jsonplaceholder.typicode.com/users')

@@ -50,6 +50,7 @@
     "react/react-in-jsx-scope": "off",
     "semi": ["error", "never"],
     "import/prefer-default-export": "off",
-    "import/no-default-export": "error"
+    "import/no-default-export": "error",
+    "@typescript-eslint/consistent-type-imports": "error"
   }
 }

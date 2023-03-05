@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { User } from '../../api/domains'
+import type { User } from '../../api/domains'
 import { getUsers } from '../../api/users'
 
 export const useUsers = () => {
