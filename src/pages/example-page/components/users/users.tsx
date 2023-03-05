@@ -1,4 +1,4 @@
-import { useUsers } from '../hooks/useUsers'
+import { useUsers } from './use-users'
 
 export function Users() {
   const { users } = useUsers()
